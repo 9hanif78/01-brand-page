@@ -1,0 +1,172 @@
+/* Hero Section */
+.hero-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 50px 100px;
+  min-height: calc(100vh - 80px);
+
+  background: #f9f9f9;
+  gap: 30px;
+}
+
+/* RIGHT SIDE (Text area) */
+.right-side {
+  flex: 1;
+}
+
+/* Title */
+.hero-title {
+  font-size: 80px;
+  font-weight: 800;
+  line-height: 1;
+
+  text-transform: uppercase;
+  color: #111;
+  margin-bottom: 20px;
+}
+
+/* Description */
+.hero-description {
+  font-size: 16px;
+  color: #555;
+  line-height: 1.6;
+
+  max-width: 500px;
+  margin-bottom: 25px;
+}
+
+/* Buttons */
+.hero-btns {
+  display: flex;
+  gap: 15px;
+
+  margin-bottom: 30px;
+}
+
+.shop-now {
+  padding: 12px 24px;
+
+  border: none;
+  border-radius: 8px;
+
+  background: #ff6b00;
+  color: white;
+
+  font-size: 15px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: all 0.3s ease;
+}
+
+.shop-now:hover {
+  background: #e85f00;
+  transform: translateY(-2px);
+}
+
+.category {
+  padding: 12px 24px;
+
+  border: 2px solid #111;
+  border-radius: 8px;
+
+  background: transparent;
+  color: #111;
+
+  font-size: 15px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: all 0.3s ease;
+}
+
+.category:hover {
+  background: #111;
+  color: white;
+  transform: translateY(-2px);
+}
+
+/* Available section */
+.available p {
+  font-size: 14px;
+  font-weight: 600;
+
+  margin-bottom: 10px;
+  color: #333;
+}
+
+/* Amazon & Flipkart links */
+.available .links {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* Small icons */
+.available .links img {
+  width: 35px;
+  height: 35px;
+
+  object-fit: contain;
+
+  cursor: pointer;
+
+  transition: transform 0.3s ease;
+}
+
+.available .links img:hover {
+  transform: scale(1.1);
+}
+
+/* LEFT SIDE (Image) */
+.left-side {
+  flex: 1;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Hero image */
+.hero-img {
+  width: 100%;
+  max-width: 500px;
+
+  filter: drop-shadow(0 20px 30px rgba(0, 0, 0, 0.15));
+
+  transition: transform 0.4s ease;
+}
+
+.hero-img:hover {
+  transform: scale(1.05) rotate(-2deg);
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .hero-section {
+    flex-direction: column;
+    text-align: center;
+
+    padding: 40px 20px;
+  }
+
+  .hero-title {
+    font-size: 40px;
+  }
+
+  .hero-description {
+    margin: 0 auto 20px;
+  }
+
+  .hero-btns {
+    justify-content: center;
+  }
+
+  .hero-img {
+    max-width: 350px;
+  }
+}

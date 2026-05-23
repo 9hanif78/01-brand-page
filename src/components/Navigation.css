@@ -1,0 +1,132 @@
+/* Navigation.css */
+
+:root {
+  --primary-color: #ff6b00;
+  --dark-color: #111;
+  --light-color: #ffffff;
+  --gray-color: #666;
+}   
+
+/* Navbar */
+nav {
+  height: 80px;
+  padding: 0 60px;
+  background-color: var(--light-color);
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+/* Logo */
+.logo-img {
+  width: 100px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.logo-img:hover {
+  transform: scale(1.05);
+}
+
+/* Links */
+.links {
+  display: flex;
+  align-items: center;
+  gap: 35px;
+  list-style: none;
+}
+
+.links li {
+  position: relative;
+
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--dark-color);
+
+  cursor: pointer;
+
+  transition: color 0.3s ease;
+}
+
+/* Hover Text Color */
+.links li:hover {
+  color: var(--primary-color);
+}
+
+/* Animated Underline */
+.links li::after {
+  content: "";
+
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+
+  width: 0%;
+  height: 2px;
+
+  background-color: var(--primary-color);
+
+  transition: width 0.3s ease;
+}
+
+.links li:hover::after {
+  width: 100%;
+}
+
+/* Login Button */
+.login-btn button {
+  padding: 10px 24px;
+
+  border: none;
+  border-radius: 8px;
+
+  background-color: var(--primary-color);
+  color: var(--light-color);
+
+  font-size: 15px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: all 0.3s ease;
+}
+
+/* Button Hover */
+.login-btn button:hover {
+  background-color: #e85f00;
+
+  transform: translateY(-2px);
+
+  box-shadow: 0 6px 15px rgba(255, 107, 0, 0.25);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  nav {
+    padding: 0 20px;
+  }
+
+  .links {
+    gap: 20px;
+  }
+
+  .links li {
+    font-size: 15px;
+  }
+
+  .logo-img {
+    width: 90px;
+  }
+
+  .login-btn button {
+    padding: 8px 18px;
+    font-size: 14px;
+  }
+}
